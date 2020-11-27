@@ -305,7 +305,7 @@ on fs
     chmod 0770 /mnt/vendor/persist/rfs/apq/gnss
     chmod 0770 /mnt/vendor/persist/hlos_rfs
 
-    restorecon_recursive --force /mnt/vendor/persist
+    restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
     chown system system /mnt/vendor/persist/rfs/shared
     chown system system /mnt/vendor/persist/rfs/msm
