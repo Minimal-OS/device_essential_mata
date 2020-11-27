@@ -15,6 +15,7 @@
 cc_binary {
     name: "android.hardware.vibrator@1.2-service.mata",
     relative_install_path: "hw",
+    header_libs: ["libhardware_headers"],
     init_rc: ["android.hardware.vibrator@1.2-service.mata.rc"],
     srcs: ["service.cpp", "Vibrator.cpp"],
     cflags: [
@@ -29,6 +30,9 @@ cc_binary {
         "libhardware",
         "libbinder_ndk",
         "android.hardware.vibrator-ndk_platform",
+        "android.hardware.vibrator@1.0",
+        "android.hardware.vibrator@1.1",
+        "android.hardware.vibrator@1.2",
     ],
     proprietary: true,
 }
